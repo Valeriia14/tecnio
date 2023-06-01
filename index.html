@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Graphing Time Series</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.css"/>
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+    <body class="bg-gray-50/50">
+        <div id="app" class="px-4 container mx-auto py-12 space-y-8 md:space-y-8">
+            <div class="grid grid-cols-12">
+                <div class="col-span-10">
+                    <!-- chart start -->
+                    <div id="chart" class=" w-full md:p-12 md:border md:shadow rounded-xl md:bg-white mx-auto"></div>
+                    <!-- chart end -->
+                    <!-- slider start -->
+                    <div id="slider" class="mt-4"></div>
+                    <!-- slider end -->
+                </div>
+                <!-- date select start -->
+                <div class="col-span-2 p-4">
+                    <div class="flex flex-col justify-center items-center h-full">
+                        <div class="w-full">
+                            <label 
+                                class="block mb-1 font-semibold text-slate-400" 
+                                for="start"
+                            >
+                                Start Date
+                            </label>
+                            <input 
+                                id="start" 
+                                type="date" 
+                                name="start" 
+                                value="2023-05-30" 
+                                class="rounded-lg w-full border-gray-300 placeholder:text-gray-500 text-gray-500"
+                            />
+                        </div>
+                        <div class="w-full">
+                            <label 
+                                class="block mb-1 font-semibold text-slate-400" 
+                                for="end"
+                            >
+                                End Date
+                            </label>
+                            <input 
+                                id="end" 
+                                type="date" 
+                                name="end" 
+                                value="2023-05-31" 
+                                class="rounded-lg w-full border-gray-300 placeholder:text-gray-500 text-gray-500"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <!-- date select end -->
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.js"></script>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
