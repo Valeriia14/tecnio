@@ -7,6 +7,7 @@ headers.append('Content-Type', 'application/json');
 
 // get data from server.
 function getData(start, end) {
+  console.log(start,'start', end, 'end')
   return new Promise((resolve) => {  
     fetch(
       config.CORS_URL+
